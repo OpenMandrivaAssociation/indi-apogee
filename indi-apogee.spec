@@ -3,6 +3,7 @@ Name: indi-apogee
 Version: 1.0
 Release: %mkrel 1
 Source0: http://downloads.sourceforge.net/indi/%{name}_%{version}.tar.gz
+Patch0: indi-apogee_1.0-fix-str-fmt.patch
 License: LGPLv2+
 Group: Development/Other
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -20,6 +21,7 @@ This package provides the INDI driver for Apgoee Alta (U & E) line of CCDs.
 
 %prep
 %setup -q -n %name-%version
+%patch0 -p0
 
 %build
 %cmake
