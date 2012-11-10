@@ -1,0 +1,20 @@
+--- indialta.c.str	2009-05-20 04:09:53.000000000 +0200
++++ indialta.c	2009-05-20 04:11:52.000000000 +0200
+@@ -314,7 +314,7 @@
+ 				IUResetSwitch (&FanSpeedSP);
+ 				FanSpeedSP.sp[fs].s = ISS_ON;
+ 				FanSpeedSP.s = IPS_OK;
+-				IDSetSwitch (&FanSpeedSP, smsg);
++				IDSetSwitch (&FanSpeedSP, "%s", smsg);
+ 		    	}
+ 
+ 		    break;
+@@ -854,7 +854,7 @@
+ 	}
+ 
+ 	TemperatureRNP.np[0].value = cnow;
+-	IDSetNumber (&TemperatureRNP, msg);
++	IDSetNumber (&TemperatureRNP, "%s", msg);
+ 
+ 	lasts = status;
+ 

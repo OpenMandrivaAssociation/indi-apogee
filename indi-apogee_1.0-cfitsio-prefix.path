@@ -1,0 +1,10 @@
+--- cmake_modules/FindCFITSIO.cmake.path	2010-08-21 10:49:43.000000000 +0200
++++ cmake_modules/FindCFITSIO.cmake	2010-08-21 10:49:57.000000000 +0200
+@@ -22,6 +22,7 @@
+ 
+   find_path(CFITSIO_INCLUDE_DIR fitsio.h
+     PATH_SUFFIXES libcfitsio3
++    cfitsio
+     ${_obIncDir}
+     ${GNUWIN32_DIR}/include
+   )
