@@ -1,0 +1,14 @@
+diff -ur indi-apogee-1.0/CMakeLists.txt indi-apogee-1.0.new/CMakeLists.txt
+--- indi-apogee-1.0/CMakeLists.txt	2010-02-18 22:23:13.000000000 +0100
++++ indi-apogee-1.0.new/CMakeLists.txt	2010-02-18 22:23:00.000000000 +0100
+@@ -39,8 +39,8 @@
+ add_executable(indi_apogeeu_ccd ${indiapogee_SRCS})
+ add_executable(indi_apogeee_ccd ${indiapogee_SRCS})
+ 
+-target_link_libraries(indi_apogeeu_ccd ${INDI_LIBRARIES} ${INDI_DRIVER_LIBRARIES} ${CFITSIO_LIBRARIES} ${APOGEEU_LIBRARIES} z)
+-target_link_libraries(indi_apogeee_ccd ${INDI_LIBRARIES} ${INDI_DRIVER_LIBRARIES} ${CFITSIO_LIBRARIES} ${APOGEEE_LIBRARIES} z)
++target_link_libraries(indi_apogeeu_ccd ${INDI_LIBRARIES} ${INDI_DRIVER_LIBRARIES} ${CFITSIO_LIBRARIES} ${APOGEEU_LIBRARIES} m z)
++target_link_libraries(indi_apogeee_ccd ${INDI_LIBRARIES} ${INDI_DRIVER_LIBRARIES} ${CFITSIO_LIBRARIES} ${APOGEEE_LIBRARIES} m z)
+ 
+ if (NOVA_FOUND)
+   target_link_libraries(indi_apogeeu_ccd ${NOVA_LIBRARIES})
