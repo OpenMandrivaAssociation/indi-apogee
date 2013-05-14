@@ -9,23 +9,21 @@ Source0:	http://downloads.sourceforge.net/indi/%{name}_%{version}.tar.gz
 Patch0:		indi-apogee_1.0-fix-str-fmt.patch
 Patch1:		indi-apogee_1.0-cfitsio-prefix.path
 Patch2:		indi-apogee_1.0-dso.patch
-BuildRequires:	pkgconfig(zlib)
-BuildRequires:	pkgconfig(libusb)
-BuildRequires:	pkgconfig(cfitsio)
-BuildRequires:	pkgconfig(libindi)
-BuildRequires:	indi-devel-static
+
+BuildRequires:	cmake
 BuildRequires:	libapogee-devel
 BuildRequires:	libnova-devel
-BuildRequires:	cmake
+BuildRequires:	pkgconfig(cfitsio)
+BuildRequires:	pkgconfig(libindi)
+BuildRequires:	pkgconfig(libusb)
+BuildRequires:	pkgconfig(zlib)
 
 %description
 This package provides the INDI driver for Apgoee Alta (U & E) line of CCDs.
 
 %prep
 %setup -q
-%patch0 -p0
-%patch1 -p0
-%patch2 -p1
+%apply_patches
 
 %build
 %cmake
@@ -39,3 +37,4 @@ This package provides the INDI driver for Apgoee Alta (U & E) line of CCDs.
 %{_bindir}/indi_apogeee_ccd
 %{_bindir}/indi_apogeeu_ccd
 %{_datadir}/indi/indi_apogee.xml
+
