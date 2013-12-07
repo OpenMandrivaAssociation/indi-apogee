@@ -1,7 +1,7 @@
 Summary:	INDI driver for Apgoee Alta (U & E) line of CCDs
 Name:		indi-apogee
 Version:	1.0
-Release:	8
+Release:	9
 License:	LGPLv2+
 Group:		Development/Other
 Url:		http://indi.sourceforge.net/
