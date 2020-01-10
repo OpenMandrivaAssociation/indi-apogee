@@ -23,7 +23,7 @@ This package provides the INDI driver for Apgoee Alta (U & E) line of CCDs.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %cmake
