@@ -4,7 +4,7 @@ Version:	1.0
 Release:	16
 License:	LGPLv2+
 Group:		Development/Other
-Url:		http://indi.sourceforge.net/
+Url:		https://indi.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/indi/%{name}_%{version}.tar.gz
 Patch0:		indi-apogee_1.0-fix-str-fmt.patch
 Patch1:		indi-apogee_1.0-cfitsio-prefix.path
